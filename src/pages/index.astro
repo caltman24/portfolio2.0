@@ -1,11 +1,52 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import CTA from "../components/CTA.astro";
+import MainNav from "../components/MainNav.astro";
+import HomeLayout from "../layouts/HomeLayout.astro";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<HomeLayout>
+  <!-- bg gradient wrapper -->
+  <div class="bg-gradient-hero">
+    <MainNav />
+
+    <header>
+      <!-- Hero Section -->
+      <section id="hero" class="text-primary-light px-4">
+        <div
+          class="max-w-7xl mx-auto text-center flex flex-col items-center justify-center gap-8 pb-24 pt-44 md:pb-44 md:pt-64"
+        >
+          <h1 class="uppercase font-extrabold text-3xl md:text-4xl xl:text-5xl">
+            Converting Ideas Into Working Products.
+          </h1>
+          <p class="max-w-4xl text-text-light">
+            Full-stack developer specializing in .NET and modern front-end tools
+            like React. I focus on building user-friendly apps, and occasionally
+            partner with clients to bring their visions to life.
+          </p>
+          <div class="flex gap-4 mt-14">
+            <CTA
+              text="My Work"
+              className="bg-brand uppercase font-bold py-3 px-8"
+            />
+            <CTA
+              text="Contact Me"
+              className="bg-brand-accent uppercase font-bold py-3 px-8"
+            />
+          </div>
+        </div>
+      </section>
+    </header>
+  </div>
+
+  <main>
+    <section id="about" class="text-primary-light px-4 bg-secondary-dark">
+      <div class="max-w-7xl mx-auto py-16">
+        <div class="flex items-center gap-2">
+          <span class="text-brand" aria-hidden="true">-</span>
+          <h2>About Me</h2>
+          <span class="text-brand" aria-hidden="true">-</span>
+        </div>
+      </div>
+    </section>
+  </main>
+</HomeLayout>

@@ -1,0 +1,30 @@
+---
+import "../styles/global.css";
+import "@fontsource/poppins";
+import "@fontsource/poppins/800.css";
+import "@fontsource/poppins/700.css";
+import "@fontsource/poppins/500.css";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Corbyn Altman | Developer For Hire</title>
+  </head>
+  <body class="bg-primary-light text-primary-dark font-poppins">
+    <slot />
+  </body>
+</html>
+
+<style>
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+</style>

@@ -1,0 +1,13 @@
+---
+export interface Props {
+  text: string;
+  className?: string;
+}
+
+const { text, className } = Astro.props;
+---
+
+<button
+  class=`px-4 py-2 transition:all duration-150 rounded-sm hover:brightness-90 hover:cursor-pointer ${className || ''}`
+  >{text}</button
+>
