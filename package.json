@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "portfolio2.0",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -9,15 +9,15 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@fontsource/poppins": "^5.1.1",
-    "@iconify-json/mdi": "^1.2.3",
-    "@tailwindcss/postcss": "^4.0.5",
     "@tailwindcss/vite": "^4.0.4",
     "astro": "^5.2.5",
     "astro-icon": "^1.1.5"
   },
   "devDependencies": {
+    "@fontsource/poppins": "^5.1.1",
+    "@tailwindcss/postcss": "^4.0.5",
     "@tailwindcss/typography": "^0.5.16",
+    "@iconify-json/mdi": "^1.2.3",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.5.1",
     "tailwindcss": "^4.0.4"

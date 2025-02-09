@@ -11,5 +11,23 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
 
-  integrations: [icon()],
+  integrations: [
+    icon({
+      iconDir: "./src/Icons",
+      include: {
+        mdi: [
+          "email",
+          "location",
+          "linkedin",
+          "github",
+          "xml",
+          "pencil-ruler",
+          "application-outline",
+          "human-male-board",
+          "react",
+          "head-dots-horizontal-outline",
+        ],
+      },
+    }),
+  ],
 });
