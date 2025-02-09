@@ -1,0 +1,127 @@
+---
+export interface Props {
+  title: string;
+  shortDescription: string;
+  previewImage: string;
+  previewUrl?: string;
+  githubUrl?: string;
+  tags?: string[];
+  technologies?: string[];
+}
+
+const {
+  title,
+  shortDescription,
+  previewImage,
+  previewUrl,
+  githubUrl,
+  tags,
+  technologies,
+} = Astro.props;
+---
+
+<article
+  class="group relative w-full h-[350px] rounded overflow-hidden shadow-lg"
+  role="article"
+  aria-labelledby={`project-title-${title.toLowerCase().replace(/\s+/g, "-")}`}
+>
+  <img
+    src={previewImage}
+    alt={`Preview of ${title} project`}
+    class="w-full h-full object-cover"
+  />
+
+  <!-- Title Bar (Always Visible) -->
+  <div
+    class="absolute bottom-0 left-0 right-0 w-[100.5%] bg-gray-900/80 backdrop-blur-sm p-4 transform transition-transform duration-300 ease-in-out"
+    role="region"
+    aria-label="Project tags and title"
+  >
+    <div class="flex flex-wrap gap-2" role="list" aria-label="Project tags">
+      {
+        tags?.map((tag) => (
+          <span
+            role="listitem"
+            class="inline-block bg-brand/80 text-white text-xs px-2 py-1 rounded"
+          >
+            {tag}
+          </span>
+        ))
+      }
+    </div>
+    <h3
+      id={`project-title-${title.toLowerCase().replace(/\s+/g, "-")}`}
+      class="text-primary-light text-lg font-bold mt-1"
+    >
+      {title}
+    </h3>
+  </div>
+
+  <!-- Full Description Overlay (Shown on Hover/Touch) -->
+  <div
+    class="absolute inset-0 w-[100.5%] bg-gray-900/90 backdrop-blur-sm p-4 transform translate-y-full transition-transform duration-300 ease-in-out
+              group-hover:translate-y-0 md:group-hover:translate-y-0
+              peer-checked:translate-y-0"
+    role="region"
+    aria-label="Project details"
+    tabindex="0"
+  >
+    <div class="h-full w-full flex flex-col justify-between">
+      <div>
+        <h3 class="text-primary-light font-bold text-lg">{title}</h3>
+        <p class="text-text-light mt-1">{shortDescription}</p>
+        <ul
+          class="flex flex-wrap gap-2 mt-4 text-primary-light"
+          role="list"
+          aria-label="Technologies used"
+        >
+          {
+            technologies?.map((tech) => (
+              <li>
+                <span class="inline-block bg-slate-700 text-xs px-2 py-1 rounded">
+                  {tech}
+                </span>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <div class="flex gap-4" role="group" aria-label="Project links">
+        {
+          previewUrl && (
+            <a
+              href={previewUrl}
+              class="inline-flex items-center px-4 py-2 bg-brand hover:brightness-90 text-white rounded transition"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`View live demo of ${title}`}
+            >
+              Live Demo
+            </a>
+          )
+        }
+        {
+          githubUrl && (
+            <a
+              href={githubUrl}
+              class="inline-flex items-center px-4 py-2 bg-brand-accent hover:brightness-90 text-white rounded transition"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`View source code for ${title} on GitHub`}
+            >
+              GitHub
+            </a>
+          )
+        }
+      </div>
+    </div>
+  </div>
+
+  <!-- Hidden checkbox for mobile touch support -->
+  <button
+    type="button"
+    class="peer absolute inset-0 w-full h-full opacity-0 cursor-pointer md:hidden"
+    aria-label={`Toggle details for ${title}`}
+    aria-expanded="false"></button>
+</article>

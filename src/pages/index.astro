@@ -4,6 +4,9 @@ import Footer from "../components/Footer.astro";
 import MainNav from "../components/MainNav.astro";
 import HomeLayout from "../layouts/HomeLayout.astro";
 import SectionLayout from "../layouts/SectionLayout.astro";
+import SiteData from "../data/sitedata";
+import SkillCard from "../components/SkillCard.astro";
+import ProjectCard from "../components/ProjectCard.astro";
 ---
 
 <HomeLayout>
@@ -94,17 +97,41 @@ import SectionLayout from "../layouts/SectionLayout.astro";
         </div>
 
         <!-- Team Offerings -->
-        <div class="mt-8">
-          <h3 class="uppercase text-center font-semibold">For Teams:</h3>
+        <div class="mt-20">
+          <h3 class="uppercase text-center font-semibold mb-10">For Teams:</h3>
+          <div class="flex flex-col gap-12">
+            {
+              SiteData.skills.forTeams.map((skill) => (
+                <SkillCard
+                  title={skill.title}
+                  icon={skill.icon}
+                  description={skill.description}
+                />
+              ))
+            }
+          </div>
         </div>
 
         <!-- Client Offerings -->
-        <div class="mt-8">
-          <h3 class="uppercase text-center font-semibold">For Clients:</h3>
+        <div class="mt-20">
+          <h3 class="uppercase text-center font-semibold mb-10">
+            For Clients:
+          </h3>
+          <div class="flex flex-col gap-12">
+            {
+              SiteData.skills.forClients.map((skill) => (
+                <SkillCard
+                  title={skill.title}
+                  icon={skill.icon}
+                  description={skill.description}
+                />
+              ))
+            }
+          </div>
         </div>
 
         <!-- Tools -->
-        <div class="mt-12 flex flex-col items-center text-center gap-8">
+        <div class="mt-20 flex flex-col items-center text-center gap-8">
           <h4 class="text-xl uppercase font-bold">
             Tools Are Just a Means to an End (That End: <span class="text-brand"
               >Happy Users</span
@@ -142,7 +169,45 @@ import SectionLayout from "../layouts/SectionLayout.astro";
               </p>
             </div>
 
-            <div></div>
+            <div
+              class="flex flex-col md:grid grid-cols-2 lg:grid-cols-3 gap-4 mt-8 items-center"
+            >
+              <ProjectCard
+                title="Weather Dashboard"
+                shortDescription="A weather application built with React that shows current weather and 5-day forecast using OpenWeather API. Features include search history, dynamic icons, and responsive design."
+                previewImage="https://images.unsplash.com/photo-1738748986807-bf1e6d00d58d?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                previewUrl="https://weather-app-demo.com"
+                githubUrl="https://github.com/username/weather-dashboard"
+                tags={["React", "JavaScript", "CSS"]}
+                technologies={["React", "OpenWeather API", "CSS"]}
+              />
+              <ProjectCard
+                title="Weather Dashboard"
+                shortDescription="A weather application built with React that shows current weather and 5-day forecast using OpenWeather API. Features include search history, dynamic icons, and responsive design."
+                previewImage="https://images.unsplash.com/photo-1738748986807-bf1e6d00d58d?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                previewUrl="https://weather-app-demo.com"
+                githubUrl="https://github.com/username/weather-dashboard"
+                tags={["React", "JavaScript", "CSS"]}
+                technologies={["React", "OpenWeather API", "CSS"]}
+              />
+              <ProjectCard
+                title="Weather Dashboard"
+                shortDescription="A weather application built with React that shows current weather and 5-day forecast using OpenWeather API. Features include search history, dynamic icons, and responsive design."
+                previewImage="https://images.unsplash.com/photo-1738748986807-bf1e6d00d58d?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                previewUrl="https://weather-app-demo.com"
+                githubUrl="https://github.com/username/weather-dashboard"
+                tags={["React", "JavaScript", "CSS"]}
+                technologies={["React", "OpenWeather API", "CSS"]}
+              /><ProjectCard
+                title="Weather Dashboard"
+                shortDescription="A weather application built with React that shows current weather and 5-day forecast using OpenWeather API. Features include search history, dynamic icons, and responsive design."
+                previewImage="https://images.unsplash.com/photo-1738748986807-bf1e6d00d58d?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                previewUrl="https://weather-app-demo.com"
+                githubUrl="https://github.com/username/weather-dashboard"
+                tags={["React", "JavaScript", "CSS"]}
+                technologies={["React", "OpenWeather API", "CSS"]}
+              />
+            </div>
           </div>
 
           <!-- Client Work -->
@@ -155,12 +220,123 @@ import SectionLayout from "../layouts/SectionLayout.astro";
               </p>
             </div>
 
-            <div></div>
+            <div
+              class="flex flex-col md:grid grid-cols-2 lg:grid-cols-3 gap-4 mt-8 items-center"
+            >
+              <ProjectCard
+                title="Weather Dashboard"
+                shortDescription="A weather application built with React that shows current weather and 5-day forecast using OpenWeather API. Features include search history, dynamic icons, and responsive design."
+                previewImage="https://images.unsplash.com/photo-1738748986807-bf1e6d00d58d?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                previewUrl="https://weather-app-demo.com"
+                githubUrl="https://github.com/username/weather-dashboard"
+                tags={["React", "JavaScript", "CSS"]}
+                technologies={["React", "OpenWeather API", "CSS"]}
+              />
+              <ProjectCard
+                title="Weather Dashboard"
+                shortDescription="A weather application built with React that shows current weather and 5-day forecast using OpenWeather API. Features include search history, dynamic icons, and responsive design."
+                previewImage="https://images.unsplash.com/photo-1738748986807-bf1e6d00d58d?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                previewUrl="https://weather-app-demo.com"
+                githubUrl="https://github.com/username/weather-dashboard"
+                tags={["React", "JavaScript", "CSS"]}
+                technologies={["React", "OpenWeather API", "CSS"]}
+              />
+              <ProjectCard
+                title="Weather Dashboard"
+                shortDescription="A weather application built with React that shows current weather and 5-day forecast using OpenWeather API. Features include search history, dynamic icons, and responsive design."
+                previewImage="https://images.unsplash.com/photo-1738748986807-bf1e6d00d58d?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                previewUrl="https://weather-app-demo.com"
+                githubUrl="https://github.com/username/weather-dashboard"
+                tags={["React", "JavaScript", "CSS"]}
+                technologies={["React", "OpenWeather API", "CSS"]}
+              /><ProjectCard
+                title="Weather Dashboard"
+                shortDescription="A weather application built with React that shows current weather and 5-day forecast using OpenWeather API. Features include search history, dynamic icons, and responsive design."
+                previewImage="https://images.unsplash.com/photo-1738748986807-bf1e6d00d58d?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                previewUrl="https://weather-app-demo.com"
+                githubUrl="https://github.com/username/weather-dashboard"
+                tags={["React", "JavaScript", "CSS"]}
+                technologies={["React", "OpenWeather API", "CSS"]}
+              />
+            </div>
           </div>
         </div>
       </SectionLayout>
     </section>
-  </main>
 
-  <Footer />
-</HomeLayout>
+    <section>
+      <SectionLayout
+        title="Contact Me"
+        subtitle=""
+        titleId="contact-title"
+        setTitleHtml={`<span>
+            Great things start with a simple ‘
+            <span class="text-brand">Hello</span>.’ Let’s begin.
+          </span>`}
+      >
+        <div class="mt-8">
+          <p class="text-text-dark">
+            Whether you have a question, want to start a project, or just want
+            to say hi, feel free to reach out. I’m always open to discussing new
+            opportunities and collaborations.
+          </p>
+        </div>
+
+        <div class="mt-8">
+          <form
+            action="https://formspree.io/f/mjvdnqzw"
+            method="POST"
+            class="flex flex-col gap-4"
+          >
+            <div class="flex flex-col md:flex-row gap-4">
+              <label for="name" class="sr-only">Name</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Name"
+                required
+                class="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand"
+              />
+              <label for="email" class="sr-only">email</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email"
+                required
+                class="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand"
+              />
+              <label for="subject" class="sr-only">Subject</label>
+              <input
+                type="text"
+                name="subject"
+                id="subject"
+                placeholder="Subject"
+                required
+                class="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand"
+              />
+            </div>
+            <label for="message" class="sr-only">Message</label>
+            <textarea
+              name="message"
+              id="message"
+              rows="4"
+              placeholder="Message"
+              required
+              class="w-full px-4 py-2 border border-gray-300 rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-brand"
+            ></textarea>
+            <button
+              type="submit"
+              class="self-start px-6 py-3 bg-brand text-primary-light font-bold uppercase text-sm rounded-md hover:bg-brand/90 transition-colors duration:200 ease-in-out hover:cursor-pointer"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+      </SectionLayout>
+
+      <Footer />
+    </section>
+  </main></HomeLayout
+>

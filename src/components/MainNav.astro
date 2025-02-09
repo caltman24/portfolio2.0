@@ -1,6 +1,6 @@
 ---
 import CTA from "./CTA.astro";
-import BrandLogo from "./BrandLogo.astro";
+import { Icon } from "astro-icon/components";
 ---
 
 <!-- Skip to main content link for keyboard users -->
@@ -22,8 +22,8 @@ import BrandLogo from "./BrandLogo.astro";
   >
   </div>
   <div class="max-w-7xl mx-auto flex items-center justify-between p-4">
-    <a href="/" aria-label="Home" class="hover:brightness-80">
-      <BrandLogo class="w-36 h-auto xl:w-40" />
+    <a href="/" aria-label="Home" class="hover:brightness-90">
+      <Icon name="brand-logo" class="w-36 h-auto xl:w-40" title="Site Logo" />
     </a>
     <div class="md:hidden">
       <button
