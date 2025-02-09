@@ -1,24 +1,33 @@
 ---
 import CTA from "../components/CTA.astro";
+import Footer from "../components/Footer.astro";
 import MainNav from "../components/MainNav.astro";
 import HomeLayout from "../layouts/HomeLayout.astro";
+import SectionLayout from "../layouts/SectionLayout.astro";
 ---
 
 <HomeLayout>
   <!-- bg gradient wrapper -->
-  <div class="bg-gradient-hero">
+  <div class="bg-gradient-hero" role="presentation">
     <MainNav />
 
-    <header>
+    <header role="banner">
       <!-- Hero Section -->
-      <section id="hero" class="text-primary-light px-4">
+      <section
+        id="hero"
+        class="text-primary-light px-4"
+        aria-labelledby="hero-title"
+      >
         <div
           class="max-w-7xl mx-auto text-center flex flex-col items-center justify-center gap-8 pb-24 pt-44 md:pb-44 md:pt-64"
         >
-          <h1 class="uppercase font-extrabold text-3xl md:text-4xl xl:text-5xl">
+          <h1
+            id="hero-title"
+            class="uppercase font-extrabold text-3xl md:text-4xl xl:text-5xl"
+          >
             Converting Ideas Into Working Products.
           </h1>
-          <p class="max-w-4xl text-text-light">
+          <p class="max-w-4xl xl:text-lg text-text-light">
             Full-stack developer specializing in .NET and modern front-end tools
             like React. I focus on building user-friendly apps, and occasionally
             partner with clients to bring their visions to life.
@@ -26,11 +35,11 @@ import HomeLayout from "../layouts/HomeLayout.astro";
           <div class="flex gap-4 mt-14">
             <CTA
               text="My Work"
-              className="bg-brand uppercase font-bold py-3 px-8"
+              className="bg-brand uppercase font-bold py-3 px-8 text-sm sm:text-md xl:text-lg"
             />
             <CTA
               text="Contact Me"
-              className="bg-brand-accent uppercase font-bold py-3 px-8"
+              className="bg-brand-accent uppercase font-bold py-3 px-8 sm:text-md text-sm xl:text-lg"
             />
           </div>
         </div>
@@ -38,15 +47,120 @@ import HomeLayout from "../layouts/HomeLayout.astro";
     </header>
   </div>
 
-  <main>
-    <section id="about" class="text-primary-light px-4 bg-secondary-dark">
-      <div class="max-w-7xl mx-auto py-16">
-        <div class="flex items-center gap-2">
-          <span class="text-brand" aria-hidden="true">-</span>
-          <h2>About Me</h2>
-          <span class="text-brand" aria-hidden="true">-</span>
+  <main role="main" id="main-content">
+    <section
+      id="about"
+      class="text-primary-light bg-secondary-dark"
+      aria-labelledby="about-title"
+    >
+      <SectionLayout
+        title="About Me"
+        subtitle="I Aim To Build Software That People Actually Like Using"
+        titleId="about-title"
+      >
+        <div class="mt-8 flex flex-col gap-8 text-text-light xl:text-lg">
+          <p>
+            I’m a self-taught developer who loves making apps that don’t suck. I
+            work with .NET and modern front-end technologies, but honestly, I
+            care more about whether the thing I build feels easy to use than the
+            tools themselves. Furthermore, I’ve messed with code since I was a
+            kid—literally broke my toys to see how they worked—and even though
+            life got in the way for a bit, I’m all in now. If you’ve got an
+            idea, let’s make it real. Websites, apps, whatever. Just don’t ask
+            me to build something clunky.
+          </p>
+          <p>
+            Look, I hate using apps that feel like a chore. You know the
+            ones—confusing buttons, slow loading, that “why is this even here?”
+            feeling. I aim to fix that and build stuff people enjoy. Let’s make
+            something that matters, even if it’s small.
+          </p>
         </div>
-      </div>
+      </SectionLayout>
+    </section>
+
+    <!-- Skills & Services -->
+    <section id="skills" aria-labelledby="skills-title">
+      <SectionLayout
+        title="Skills & Services"
+        subtitle="Code for Teams, Build for Clients."
+        titleId="skills-title"
+      >
+        <div class="mt-8">
+          <p class="text-text-dark">
+            Whether I’m collaborating with developers or working one-on-one with
+            clients, I care about solving problems, not just shipping features.
+          </p>
+        </div>
+
+        <!-- Team Offerings -->
+        <div class="mt-8">
+          <h3 class="uppercase text-center font-semibold">For Teams:</h3>
+        </div>
+
+        <!-- Client Offerings -->
+        <div class="mt-8">
+          <h3 class="uppercase text-center font-semibold">For Clients:</h3>
+        </div>
+
+        <!-- Tools -->
+        <div class="mt-12 flex flex-col items-center text-center gap-8">
+          <h4 class="text-xl uppercase font-bold">
+            Tools Are Just a Means to an End (That End: <span class="text-brand"
+              >Happy Users</span
+            >).
+          </h4>
+          <p class="text-text-dark">
+            I pick tools based on your project’s needs, not the latest hype. If
+            it solves the problem and keeps users smiling, we’re golden.
+          </p>
+        </div>
+      </SectionLayout>
+    </section>
+
+    <!-- Portfolio -->
+    <section
+      id="portfolio"
+      class="bg-gradient-section text-primary-light"
+      aria-labelledby="portfolio-title"
+    >
+      <SectionLayout
+        title="Portfolio"
+        subtitle="I build apps that solve problems"
+        additionalSubtitles={["…and clients who trust me to solve theirs."]}
+        titleId="portfolio-title"
+      >
+        <div class="mt-8">
+          <!-- Personal Projects -->
+          <div>
+            <div>
+              <h3 class="font-medium text-lg">Featured Personal Projects</h3>
+              <p class="text-text-light">
+                My projects range from fully developed applications to sandbox
+                environments where I can investigate new technologies and refine
+                my skills.
+              </p>
+            </div>
+
+            <div></div>
+          </div>
+
+          <!-- Client Work -->
+          <div class="mt-8">
+            <div>
+              <h3 class="font-medium text-lg">Client Work</h3>
+              <p class="text-text-light">
+                Collaborative projects where I adapt to client needs—balancing
+                deadlines, budgets, and clean code.
+              </p>
+            </div>
+
+            <div></div>
+          </div>
+        </div>
+      </SectionLayout>
     </section>
   </main>
+
+  <Footer />
 </HomeLayout>

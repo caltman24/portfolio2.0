@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
 
 
 @theme {
@@ -15,7 +17,7 @@
     --gradient-section: linear-gradient(201.62deg, rgba(136, 0, 255, 0.1) 0%, rgba(134, 0, 252, 0.0125) 76.81%, rgba(28, 33, 49, 0) 99.84%), var(--color-primary-dark);
 
     --color-text-dark: rgba(28, 33, 49, 0.9);
-    --color-text-light: rgba(245, 235, 255, 0.9);
+    --color-text-light: rgba(245, 235, 255, 0.8);
 }
 
 .bg-gradient-hero {

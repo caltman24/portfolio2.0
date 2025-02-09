@@ -1,0 +1,89 @@
+---
+import BrandLogo from "./BrandLogo.astro";
+---
+
+<footer
+  class="bg-secondary-dark text-primary-light shadow-[0_-4px_6px_-3px_rgba(0,0,0,0.1)]"
+  role="contentinfo"
+>
+  <div class="flex flex-col gap-8 py-12 px-4 max-w-7xl mx-auto">
+    <div class="flex justify-between gap-16">
+      <div class="flex flex-col gap-3">
+        <a href="/" aria-label="Return to homepage" class="hover:brightness-80">
+          <BrandLogo />
+        </a>
+        <p class="text-text-light">
+          A small-time developer based in Fort Wayne Indiana
+        </p>
+      </div>
+      <nav aria-label="Footer navigation">
+        <ul class="flex flex-col gap-4" role="menubar">
+          <li role="none">
+            <a
+              href="#about"
+              class="hover:text-brand/90 transition-colors duration:200"
+              role="menuitem">About</a
+            >
+          </li>
+          <li role="none">
+            <a
+              href="#skills"
+              class="hover:text-brand/90 transition-colors duration:200"
+              role="menuitem">Skills</a
+            >
+          </li>
+          <li role="none">
+            <a
+              href="#portfolio"
+              class="hover:text-brand/90 transition-colors duration:200"
+              role="menuitem">Portfolio</a
+            >
+          </li>
+          <li role="none">
+            <a
+              href="#contact"
+              class="hover:text-brand/90 transition-colors duration:200"
+              role="menuitem">Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div role="region" aria-label="Contact information">
+      <h2 class="font-bold text-lg">Contact Me</h2>
+      <div class="flex flex-col gap-3 mt-4">
+        <p>Please use the contact form to email me</p>
+        <p>Based in Fort Wayne, Indiana</p>
+      </div>
+    </div>
+
+    <div role="region" aria-label="Social media links">
+      <h2 class="font-bold text-lg">Socials</h2>
+      <div class="flex gap-4 mt-4">
+        <a
+          href="#"
+          class="hover:text-brand/90 transition-colors duration:200"
+          aria-label="Visit my LinkedIn profile">LinkedIn</a
+        >
+        <a
+          href="#"
+          class="hover:text-brand/90 transition-colors duration:200"
+          aria-label="Visit my GitHub profile">GitHub</a
+        >
+      </div>
+    </div>
+  </div>
+  <div class="w-full bg-footer py-4 px-4 font-light text-text-light text-sm">
+    <p>
+      © Copyright <span id="copyright-year">2025</span> | Corbyn Altman | All Rights
+      Reserved
+    </p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("copyright-year")!.textContent = new Date()
+    .getFullYear()
+    .toString();
+</script>
