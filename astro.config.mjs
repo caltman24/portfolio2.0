@@ -10,10 +10,12 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-
+  image: {
+    domains: ["images.unsplash.com"],
+  },
   integrations: [
     icon({
-      iconDir: "./src/Icons",
+      iconDir: "./src/assets/icons",
       include: {
         mdi: [
           "email",

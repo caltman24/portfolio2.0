@@ -1,8 +1,10 @@
 ---
+import { Image } from "astro:assets";
+
 export interface Props {
   title: string;
   shortDescription: string;
-  previewImage: string;
+  previewImage: ImageMetadata | string;
   previewUrl?: string;
   githubUrl?: string;
   tags?: string[];
@@ -25,11 +27,23 @@ const {
   role="article"
   aria-labelledby={`project-title-${title.toLowerCase().replace(/\s+/g, "-")}`}
 >
-  <img
-    src={previewImage}
-    alt={`Preview of ${title} project`}
-    class="w-full h-full object-cover"
-  />
+  {
+    typeof previewImage === "string" ? (
+      <img
+        width={600}
+        height={400}
+        src={previewImage}
+        alt={`Preview of ${title} project`}
+        class="w-full h-full object-cover"
+      />
+    ) : (
+      <Image
+        src={previewImage}
+        alt={`Preview of ${title} project`}
+        class="w-full h-full object-cover"
+      />
+    )
+  }
 
   <!-- Title Bar (Always Visible) -->
   <div
@@ -51,7 +65,7 @@ const {
     </div>
     <h3
       id={`project-title-${title.toLowerCase().replace(/\s+/g, "-")}`}
-      class="text-primary-light text-lg font-bold mt-1"
+      class="text-primary-light text-lg font-bold mt-3"
     >
       {title}
     </h3>
