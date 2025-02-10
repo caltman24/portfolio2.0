@@ -36,14 +36,18 @@ import ProjectCard from "../components/ProjectCard.astro";
             partner with clients to bring their visions to life.
           </p>
           <div class="flex gap-4 mt-14">
-            <CTA
-              text="My Work"
-              className="bg-brand uppercase font-bold py-3 px-8 text-sm sm:text-md xl:text-lg"
-            />
-            <CTA
-              text="Contact Me"
-              className="bg-brand-accent uppercase font-bold py-3 px-8 sm:text-md text-sm xl:text-lg"
-            />
+            <a href="#portfolio">
+              <CTA
+                text="My Work"
+                className="bg-brand uppercase font-bold py-3 px-8 text-sm sm:text-md xl:text-lg"
+              />
+            </a>
+            <a href="#contact">
+              <CTA
+                text="Contact Me"
+                className="bg-brand-accent uppercase font-bold py-3 px-8 sm:text-md text-sm xl:text-lg"
+              />
+            </a>
           </div>
         </div>
       </section>
@@ -101,7 +105,7 @@ import ProjectCard from "../components/ProjectCard.astro";
           <h3 class="uppercase text-center text-lg font-semibold mb-12">
             For Teams:
           </h3>
-          <div class="flex flex-col gap-16">
+          <div class="flex flex-col lg:grid grid-cols-3 gap-16">
             {
               SiteData.skills.forTeams.map((skill) => (
                 <SkillCard
@@ -115,11 +119,11 @@ import ProjectCard from "../components/ProjectCard.astro";
         </div>
 
         <!-- Client Offerings -->
-        <div class="mt-20">
+        <div class="mt-20 lg:mt-36">
           <h3 class="uppercase text-center text-lg font-semibold mb-12">
             For Clients:
           </h3>
-          <div class="flex flex-col gap-16">
+          <div class="flex flex-col lg:grid grid-cols-3 gap-16">
             {
               SiteData.skills.forClients.map((skill) => (
                 <SkillCard
@@ -133,7 +137,9 @@ import ProjectCard from "../components/ProjectCard.astro";
         </div>
 
         <!-- Tools -->
-        <div class="mt-20 flex flex-col items-center text-center gap-8">
+        <div
+          class="mt-28 lg:mt-36 flex flex-col items-center text-center gap-8"
+        >
           <h4 class="text-xl uppercase font-bold">
             Tools Are Just a Means to an End (That End: <span class="text-brand"
               >Happy Users</span
@@ -243,7 +249,7 @@ import ProjectCard from "../components/ProjectCard.astro";
       </SectionLayout>
     </section>
 
-    <section>
+    <section id="contact" aria-labelledby="contact-title">
       <SectionLayout
         title="Contact Me"
         subtitle=""
@@ -261,13 +267,13 @@ import ProjectCard from "../components/ProjectCard.astro";
           </p>
         </div>
 
-        <div class="mt-8 overflow-x-hidden">
+        <div class="mt-20 overflow-x-hidden">
           <form
             action="https://formspree.io/f/mjvdnqzw"
             method="POST"
             class="flex flex-col gap-4"
           >
-            <div class="flex flex-col md:flex-row gap-4">
+            <div class="flex flex-col md:flex-row md:flex-wrap gap-4">
               <label for="name" class="sr-only">Name</label>
               <input
                 type="text"
@@ -307,7 +313,7 @@ import ProjectCard from "../components/ProjectCard.astro";
             ></textarea>
             <button
               type="submit"
-              class="self-start px-6 py-3 bg-brand text-primary-light font-bold uppercase text-sm rounded-md hover:bg-brand/90 transition-colors duration:200 ease-in-out hover:cursor-pointer"
+              class="self-start px-6 py-3 bg-brand text-primary-light font-bold uppercase text-sm rounded-md hover:brightness-90 transition-colors duration:200 ease-in-out hover:cursor-pointer max-md:w-full"
             >
               Send Message
             </button>
