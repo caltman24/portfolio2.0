@@ -21,10 +21,10 @@ export default {
   ],
   forClients: [
     {
-      title: "Full-Stack Web Apps",
+      title: "Streamlined Websites",
       icon: "mdi:application-outline",
       description:
-        "From prototypes to full-featured apps with databases and user logins, I build end-to-end solutions using whatever tools fit best.",
+        'Basic websites done well. Because sometimes "simple" is all you need. Affordable, easy to update, and designed to just work.',
     },
     {
       title: "Custom Software Solutions",
