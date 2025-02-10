@@ -7,7 +7,7 @@
     --font-poppins: Poppins, sans-serif;
 
     --color-brand: #8800FF;
-    --color-brand-accent: #776F95;
+    --color-brand-accent: #696284;
     --color-primary-dark: #1C2131;
     --color-primary-light: #F5EBFF;
     --color-secondary-dark: #1C1C1C;
@@ -17,11 +17,12 @@
     --gradient-section: linear-gradient(201.62deg, rgba(136, 0, 255, 0.1) 0%, rgba(134, 0, 252, 0.0125) 76.81%, rgba(28, 33, 49, 0) 99.84%), var(--color-primary-dark);
 
     --color-text-dark: rgba(28, 33, 49, 0.9);
-    --color-text-light: rgba(245, 235, 255, 0.8);
+    --color-text-light: rgba(245, 235, 255, 0.9);
 }
 
 .bg-gradient-hero {
     background: var(--gradient-hero);
+    color: #696284;
 }
 
 .bg-gradient-section {

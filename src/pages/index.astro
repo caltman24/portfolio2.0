@@ -25,6 +25,7 @@ import { Icon } from "astro-icon/components";
         <div
           class="max-w-7xl mx-auto text-center flex flex-col items-center justify-center gap-8 pb-24 pt-44 md:pb-44 md:pt-64"
         >
+          <!-- Heading -->
           <h1
             id="hero-title"
             class="uppercase font-extrabold text-3xl md:text-4xl xl:text-5xl"
@@ -36,6 +37,7 @@ import { Icon } from "astro-icon/components";
             like React. I focus on building user-friendly apps, and occasionally
             partner with clients to bring their visions to life.
           </p>
+          <!-- CTA Buttons -->
           <div class="flex gap-4 mt-14">
             <a href="#portfolio">
               <CTA
@@ -56,6 +58,7 @@ import { Icon } from "astro-icon/components";
   </div>
 
   <main role="main" id="main-content">
+    <!-- About Section -->
     <section
       id="about"
       class="text-primary-light bg-secondary-dark"
@@ -95,15 +98,17 @@ import { Icon } from "astro-icon/components";
         titleId="skills-title"
       >
         <div class="mt-8">
-          <p class="text-text-dark">
+          <p class="text-text-dark xl:text-lg">
             Whether I’m collaborating with developers or working one-on-one with
             clients, I care about solving problems, not just shipping features.
           </p>
         </div>
 
         <!-- Team Offerings -->
-        <div class="mt-20">
-          <h3 class="uppercase text-center text-lg font-semibold mb-12">
+        <article class="mt-20">
+          <h3
+            class="uppercase text-center text-lg xl:text-xl font-semibold mb-12"
+          >
             For Teams:
           </h3>
           <div class="flex flex-col lg:grid grid-cols-3 gap-16">
@@ -117,11 +122,13 @@ import { Icon } from "astro-icon/components";
               ))
             }
           </div>
-        </div>
+        </article>
 
         <!-- Client Offerings -->
-        <div class="mt-20 lg:mt-36">
-          <h3 class="uppercase text-center text-lg font-semibold mb-12">
+        <article class="mt-20 lg:mt-36">
+          <h3
+            class="uppercase text-center text-lg xl:text-xl font-semibold mb-12"
+          >
             For Clients:
           </h3>
           <div class="flex flex-col lg:grid grid-cols-3 gap-16">
@@ -135,18 +142,18 @@ import { Icon } from "astro-icon/components";
               ))
             }
           </div>
-        </div>
+        </article>
 
         <!-- Tools -->
-        <div
+        <article
           class="mt-28 lg:mt-36 flex flex-col items-center text-center gap-8"
         >
-          <h4 class="text-xl uppercase font-bold">
+          <h4 class="text-xl xl:text-2xl uppercase font-bold">
             Tools Are Just a Means to an End (That End: <span class="text-brand"
               >Happy Users</span
             >).
           </h4>
-          <p class="text-text-dark">
+          <p class="text-text-dark xl:text-lg">
             I pick tools based on your project’s needs, not the latest hype. If
             it solves the problem and keeps users smiling, we’re golden.
           </p>
@@ -164,7 +171,7 @@ import { Icon } from "astro-icon/components";
               ))
             }
           </div>
-        </div>
+        </article>
       </SectionLayout>
     </section>
 
@@ -180,12 +187,14 @@ import { Icon } from "astro-icon/components";
         additionalSubtitles={["…and clients who trust me to solve theirs."]}
         titleId="portfolio-title"
       >
-        <div class="mt-20">
+        <article class="mt-20">
           <!-- Personal Projects -->
           <div>
             <div>
-              <h3 class="font-semibold text-lg">Featured Personal Projects</h3>
-              <p class="text-text-light">
+              <h3 class="font-semibold text-lg xl:text-xl">
+                Featured Personal Projects
+              </h3>
+              <p class="text-text-light xl:text-lg">
                 My projects range from fully developed applications to sandbox
                 environments where I can investigate new technologies and refine
                 my skills.
@@ -234,10 +243,10 @@ import { Icon } from "astro-icon/components";
           </div>
 
           <!-- Client Work -->
-          <div class="mt-20">
+          <article class="mt-20">
             <div>
-              <h3 class="font-semibold text-lg">Client Work</h3>
-              <p class="text-text-light">
+              <h3 class="font-semibold text-lg xl:text-xl">Client Work</h3>
+              <p class="text-text-light xl:text-lg">
                 Collaborative projects where I adapt to client needs—balancing
                 deadlines, budgets, and clean code.
               </p>
@@ -259,11 +268,12 @@ import { Icon } from "astro-icon/components";
                 ))
               }
             </div>
-          </div>
-        </div>
+          </article>
+        </article>
       </SectionLayout>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact" aria-labelledby="contact-title">
       <SectionLayout
         title="Contact Me"
@@ -275,13 +285,14 @@ import { Icon } from "astro-icon/components";
           </span>`}
       >
         <div class="mt-8">
-          <p class="text-text-dark">
+          <p class="text-text-dark xl:text-lg">
             Whether you have a question, want to start a project, or just want
             to say hi, feel free to reach out. I’m always open to discussing new
             opportunities and collaborations.
           </p>
         </div>
 
+        <!-- Contact Form -->
         <div class="mt-20">
           <form
             action="https://formspree.io/f/mjvdnqzw"
@@ -336,6 +347,8 @@ import { Icon } from "astro-icon/components";
         </div>
       </SectionLayout>
     </section>
+    <!-- End of main content -->
   </main>
+
   <Footer />
 </HomeLayout>
