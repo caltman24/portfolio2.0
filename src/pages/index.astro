@@ -98,8 +98,10 @@ import ProjectCard from "../components/ProjectCard.astro";
 
         <!-- Team Offerings -->
         <div class="mt-20">
-          <h3 class="uppercase text-center font-semibold mb-10">For Teams:</h3>
-          <div class="flex flex-col gap-12">
+          <h3 class="uppercase text-center text-lg font-semibold mb-12">
+            For Teams:
+          </h3>
+          <div class="flex flex-col gap-16">
             {
               SiteData.skills.forTeams.map((skill) => (
                 <SkillCard
@@ -114,10 +116,10 @@ import ProjectCard from "../components/ProjectCard.astro";
 
         <!-- Client Offerings -->
         <div class="mt-20">
-          <h3 class="uppercase text-center font-semibold mb-10">
+          <h3 class="uppercase text-center text-lg font-semibold mb-12">
             For Clients:
           </h3>
-          <div class="flex flex-col gap-12">
+          <div class="flex flex-col gap-16">
             {
               SiteData.skills.forClients.map((skill) => (
                 <SkillCard
@@ -157,11 +159,11 @@ import ProjectCard from "../components/ProjectCard.astro";
         additionalSubtitles={["…and clients who trust me to solve theirs."]}
         titleId="portfolio-title"
       >
-        <div class="mt-8">
+        <div class="mt-20">
           <!-- Personal Projects -->
           <div>
             <div>
-              <h3 class="font-medium text-lg">Featured Personal Projects</h3>
+              <h3 class="font-semibold text-lg">Featured Personal Projects</h3>
               <p class="text-text-light">
                 My projects range from fully developed applications to sandbox
                 environments where I can investigate new technologies and refine
@@ -211,9 +213,9 @@ import ProjectCard from "../components/ProjectCard.astro";
           </div>
 
           <!-- Client Work -->
-          <div class="mt-8">
+          <div class="mt-20">
             <div>
-              <h3 class="font-medium text-lg">Client Work</h3>
+              <h3 class="font-semibold text-lg">Client Work</h3>
               <p class="text-text-light">
                 Collaborative projects where I adapt to client needs—balancing
                 deadlines, budgets, and clean code.
@@ -259,7 +261,7 @@ import ProjectCard from "../components/ProjectCard.astro";
           </p>
         </div>
 
-        <div class="mt-8">
+        <div class="mt-8 overflow-x-hidden">
           <form
             action="https://formspree.io/f/mjvdnqzw"
             method="POST"
