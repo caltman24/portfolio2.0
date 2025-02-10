@@ -7,6 +7,7 @@ import SectionLayout from "../layouts/SectionLayout.astro";
 import SiteData from "../data/sitedata";
 import SkillCard from "../components/SkillCard.astro";
 import ProjectCard from "../components/ProjectCard.astro";
+import { Icon } from "astro-icon/components";
 ---
 
 <HomeLayout>
@@ -149,6 +150,20 @@ import ProjectCard from "../components/ProjectCard.astro";
             I pick tools based on your project’s needs, not the latest hype. If
             it solves the problem and keeps users smiling, we’re golden.
           </p>
+
+          <div
+            class="mt-8 grid grid-cols-4 md:grid-cols-[repeat(auto-fit,_minmax(0,_1fr))] w-full max-w-xl md:max-w-2xl lg:max-w-3xl xl:max-w-4xl mx-auto place-items-center gap-6"
+          >
+            {
+              SiteData.skills.tools.map((tool) => (
+                <Icon
+                  name={tool.icon}
+                  title={tool.name}
+                  class="w-full max-w-20 lg:max-w-24 xl:max-w-28 h-auto"
+                />
+              ))
+            }
+          </div>
         </div>
       </SectionLayout>
     </section>

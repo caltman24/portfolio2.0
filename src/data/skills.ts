@@ -39,4 +39,38 @@ export default {
         "I put myself in the user's shoes, always. From the big picture down to the smallest detail, I'm focused on ensuring they have a positive and productive experience.",
     },
   ],
+  tools: [
+    {
+      name: "React",
+      icon: "react",
+    },
+    {
+      name: ".NET",
+      icon: "dotnet",
+    },
+    {
+      name: "Javascript",
+      icon: "javascript",
+    },
+    {
+      name: "Typescript",
+      icon: "typescript",
+    },
+    {
+      name: "Tailwind CSS",
+      icon: "tailwindcss",
+    },
+    {
+      name: "SQL",
+      icon: "sql",
+    },
+    {
+      name: "Wordpress",
+      icon: "wordpress",
+    },
+    {
+      name: "Strapi CMS",
+      icon: "strapicms",
+    },
+  ],
 };
