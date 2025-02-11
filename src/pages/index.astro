@@ -19,9 +19,13 @@ import { Icon } from "astro-icon/components";
       <!-- Hero Section -->
       <section
         id="hero"
-        class="text-primary-light px-4"
+        class="text-primary-light px-4 relative overflow-hidden"
         aria-labelledby="hero-title"
       >
+        <Icon
+          name="light-bulb"
+          class="absolute -right-15 top-20 w-md h-auto md:top-30 md:-right-25 md:w-lg lg:w-2xl lg:top-5 lg:right-5"
+        />
         <div
           class="max-w-7xl mx-auto text-center flex flex-col items-center justify-center gap-8 pb-24 pt-44 md:pb-44 md:pt-64"
         >
@@ -61,7 +65,7 @@ import { Icon } from "astro-icon/components";
     <!-- About Section -->
     <section
       id="about"
-      class="text-primary-light bg-secondary-dark"
+      class="text-primary-light bg-secondary-dark relative z-40"
       aria-labelledby="about-title"
     >
       <SectionLayout
@@ -91,7 +95,15 @@ import { Icon } from "astro-icon/components";
     </section>
 
     <!-- Skills & Services -->
-    <section id="skills" aria-labelledby="skills-title">
+    <section
+      id="skills"
+      aria-labelledby="skills-title"
+      class="relative overflow-hidden"
+    >
+      <Icon
+        name="brand-accent"
+        class="absolute bottom-0 right-0 w-[1920px] h-auto"
+      />
       <SectionLayout
         title="Skills & Services"
         subtitle="Code for Teams, Build for Clients."
@@ -178,9 +190,13 @@ import { Icon } from "astro-icon/components";
     <!-- Portfolio -->
     <section
       id="portfolio"
-      class="bg-gradient-section text-primary-light"
+      class="bg-gradient-section text-primary-light relative z-0 overflow-hidden"
       aria-labelledby="portfolio-title"
     >
+      <Icon
+        name="square-bg"
+        class="absolute inset-0 w-[1920px] 2xl:w-[2560px] h-auto z-0"
+      />
       <SectionLayout
         title="Portfolio"
         subtitle="I build apps that solve problems"
@@ -274,7 +290,7 @@ import { Icon } from "astro-icon/components";
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" aria-labelledby="contact-title">
+    <section id="contact" aria-labelledby="contact-title" class="relative z-40">
       <SectionLayout
         title="Contact Me"
         subtitle=""
