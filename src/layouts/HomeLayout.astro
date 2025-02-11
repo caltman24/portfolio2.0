@@ -5,6 +5,7 @@ import "@fontsource/poppins/800.css";
 import "@fontsource/poppins/700.css";
 import "@fontsource/poppins/500.css";
 import "@fontsource/poppins/300.css";
+import { SEO } from "astro-seo";
 ---
 
 <!doctype html>
@@ -12,8 +13,28 @@ import "@fontsource/poppins/300.css";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="manifest" href="/site.webmanifest" />
     <meta name="generator" content={Astro.generator} />
+    <SEO
+      title="Corbyn Altman - Developer For Hire"
+      description="Corbyn Altman is a developer for hire, specializing in building web applications and websites."
+      openGraph={{
+        basic: {
+          title: "Corbyn Altman - Portfolio",
+          type: "website",
+          url: "https://corbynaltman.com",
+          image:
+            "https://res.cloudinary.com/drvo6kdsl/image/upload/myohjpmxryjvdkbtxo6e",
+        },
+        image: {
+          alt: "Corbyn Altman Site Logo",
+        },
+      }}
+    />
     <title>Corbyn Altman | Developer For Hire</title>
   </head>
   <body class="bg-primary-light text-primary-dark font-poppins">

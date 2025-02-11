@@ -36,8 +36,8 @@ export default [
     description:
       "Contact Vault is an all-in-one contact management system. It's similar to what's on your phone but with a little extra sauce. Add social media platforms to your contacts to have one place for contacts across multiple platforms.",
     previewImage: bitImage,
-    previewUrl: "https://contactvault.up.railway.app",
-    githubUrl: "https://github.com/caltman24/ContactVault-Public",
+    previewUrl: "https://discord.gg/dqVEtNn6eX",
+    githubUrl: "https://github.com/caltman24/BIT",
     tags: ["Discord Bot"],
     technologies: ["Node.js", "Discord.js"],
   },
