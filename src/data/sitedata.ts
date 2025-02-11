@@ -4,7 +4,7 @@ import skills from "./skills";
 
 export default {
   socialUrls: {
-    linkedin: "https://www.linkedin.com/caltman24/",
+    linkedin: "https://www.linkedin.com/in/caltman24/",
     github: "https://github.com/caltman24",
   },
   skills,
