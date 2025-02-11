@@ -1,12 +1,14 @@
+import projectImg from "../assets/images/projects/ingloommedia.png";
+
 export default [
   {
     title: "In Gloom Media",
-    shortDescription: "A blog and media site for the metal band In Gloom.",
     description:
-      "A blog and media site for the metal band In Gloom. Built with Next.js, TailwindCSS, and a custom WordPress backend.",
-    previewImage: "",
-    previewUrl: "",
+      "In Gloom Media specalizes in lyric videos / visualizers, logo design, and Twitch animations. Strapi CMS provided a user-friendly CMS making it easy for my client to manage and update content. Paired with Astro, this resulted in a fast and seamless experience.",
+    previewImage: projectImg,
+    previewUrl: "https://ingloommedia.com",
     githubUrl: "",
-    tags: [],
+    tags: ["Landing Page"],
+    technologies: ["Astro", "Tailwind", "Strapi CMS"],
   },
 ];

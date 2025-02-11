@@ -5,8 +5,8 @@ import MainNav from "../components/MainNav.astro";
 import HomeLayout from "../layouts/HomeLayout.astro";
 import SectionLayout from "../layouts/SectionLayout.astro";
 import SiteData from "../data/sitedata";
-import SkillCard from "../components/SkillCard.astro";
 import ProjectCard from "../components/ProjectCard.astro";
+import SkillCard from "../components/SkillCard.astro";
 import { Icon } from "astro-icon/components";
 ---
 
@@ -195,7 +195,7 @@ import { Icon } from "astro-icon/components";
     >
       <Icon
         name="square-bg"
-        class="absolute inset-0 w-[1700px] md:w-full h-auto z-0 lg:opacity-80"
+        class="absolute inset-0 w-[1700px] md:w-[250%] lg:w-[200%] xl:w-[140%] h-auto z-0 lg:opacity-80"
       />
       <SectionLayout
         title="Portfolio"
@@ -218,43 +218,21 @@ import { Icon } from "astro-icon/components";
             </div>
 
             <div
-              class="flex flex-col md:grid grid-cols-2 lg:grid-cols-3 gap-4 mt-8 items-center"
+              class="flex flex-col md:grid grid-cols-2 xl:grid-cols-3 gap-4 mt-8 items-center"
             >
-              <ProjectCard
-                title="Weather Dashboard"
-                shortDescription="A weather application built with React that shows current weather and 5-day forecast using OpenWeather API. Features include search history, dynamic icons, and responsive design."
-                previewImage="https://images.unsplash.com/photo-1738748986807-bf1e6d00d58d?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                previewUrl="https://weather-app-demo.com"
-                githubUrl="https://github.com/username/weather-dashboard"
-                tags={["React", "JavaScript", "CSS"]}
-                technologies={["React", "OpenWeather API", "CSS"]}
-              />
-              <ProjectCard
-                title="Weather Dashboard"
-                shortDescription="A weather application built with React that shows current weather and 5-day forecast using OpenWeather API. Features include search history, dynamic icons, and responsive design."
-                previewImage="https://images.unsplash.com/photo-1738748986807-bf1e6d00d58d?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                previewUrl="https://weather-app-demo.com"
-                githubUrl="https://github.com/username/weather-dashboard"
-                tags={["React", "JavaScript", "CSS"]}
-                technologies={["React", "OpenWeather API", "CSS"]}
-              />
-              <ProjectCard
-                title="Weather Dashboard"
-                shortDescription="A weather application built with React that shows current weather and 5-day forecast using OpenWeather API. Features include search history, dynamic icons, and responsive design."
-                previewImage="https://images.unsplash.com/photo-1738748986807-bf1e6d00d58d?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                previewUrl="https://weather-app-demo.com"
-                githubUrl="https://github.com/username/weather-dashboard"
-                tags={["React", "JavaScript", "CSS"]}
-                technologies={["React", "OpenWeather API", "CSS"]}
-              /><ProjectCard
-                title="Weather Dashboard"
-                shortDescription="A weather application built with React that shows current weather and 5-day forecast using OpenWeather API. Features include search history, dynamic icons, and responsive design."
-                previewImage="https://images.unsplash.com/photo-1738748986807-bf1e6d00d58d?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                previewUrl="https://weather-app-demo.com"
-                githubUrl="https://github.com/username/weather-dashboard"
-                tags={["React", "JavaScript", "CSS"]}
-                technologies={["React", "OpenWeather API", "CSS"]}
-              />
+              {
+                SiteData.projects.personal.map((project) => (
+                  <ProjectCard
+                    title={project.title}
+                    description={project.description}
+                    previewImage={project.previewImage}
+                    previewUrl={project.previewUrl}
+                    githubUrl={project.githubUrl}
+                    tags={project.tags}
+                    technologies={project.technologies}
+                  />
+                ))
+              }
             </div>
           </div>
 
@@ -272,14 +250,15 @@ import { Icon } from "astro-icon/components";
               class="flex flex-col md:grid grid-cols-2 lg:grid-cols-3 gap-4 mt-8 items-center"
             >
               {
-                SiteData.projects.personal.map((project) => (
+                SiteData.projects.clientWork.map((project) => (
                   <ProjectCard
                     title={project.title}
-                    shortDescription={project.shortDescription}
+                    description={project.description}
                     previewImage={project.previewImage}
                     previewUrl={project.previewUrl}
                     githubUrl={project.githubUrl}
                     tags={project.tags}
+                    technologies={project.technologies}
                   />
                 ))
               }
@@ -290,7 +269,7 @@ import { Icon } from "astro-icon/components";
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" aria-labelledby="contact-title" class="relative z-40">
+    <section id="contact" aria-labelledby="contact-title">
       <SectionLayout
         title="Contact Me"
         subtitle=""
