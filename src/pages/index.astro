@@ -290,11 +290,20 @@ import { Icon } from "astro-icon/components";
         <!-- Contact Form -->
         <div class="mt-20">
           <form
-            action="https://formspree.io/f/mjvdnqzw"
             method="POST"
             class="flex flex-col gap-4"
+            name="contact"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
           >
             <div class="flex flex-col md:flex-row md:flex-wrap gap-4">
+              <p class="hidden">
+                <label>
+                  Don’t fill this out if you’re human: <input
+                    name="bot-field"
+                  />
+                </label>
+              </p>
               <label for="name" class="sr-only">Name</label>
               <input
                 type="text"
@@ -304,7 +313,7 @@ import { Icon } from "astro-icon/components";
                 required
                 class="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand"
               />
-              <label for="email" class="sr-only">email</label>
+              <label for="email" class="sr-only">Email</label>
               <input
                 type="email"
                 name="email"
