@@ -294,12 +294,14 @@ import { Icon } from "astro-icon/components";
             class="flex flex-col gap-4"
             name="contact"
             data-netlify="true"
+            data-netlify-recaptcha="true"
             netlify-honeypot="bot-field"
+            onsubmit="return validateCaptchaResponse(event)"
           >
             <div class="flex flex-col md:flex-row md:flex-wrap gap-4">
               <p class="hidden">
                 <label>
-                  Don’t fill this out if you’re human: <input
+                  Don't fill this out if you're human: <input
                     name="bot-field"
                   />
                 </label>
@@ -341,6 +343,10 @@ import { Icon } from "astro-icon/components";
               required
               class="px-4 py-2 border border-gray-300 rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-brand"
             ></textarea>
+            <div data-netlify-recaptcha="true"></div>
+            <div id="captcha-error" class="text-red-500 text-sm hidden">
+              Please complete the captcha before submitting.
+            </div>
             <button
               type="submit"
               class="self-start px-6 py-3 bg-brand text-primary-light font-bold uppercase text-sm rounded-md hover:brightness-90 transition-colors duration:200 ease-in-out hover:cursor-pointer max-md:w-full"
@@ -356,3 +362,30 @@ import { Icon } from "astro-icon/components";
 
   <Footer />
 </HomeLayout>
+
+<script is:inline>
+  function validateCaptchaResponse(event) {
+    event.preventDefault();
+    if (!document.querySelector("div[data-netlify-recaptcha]")) {
+      console.error("reCAPTCHA div not found");
+      return;
+    }
+
+    if (!window.grecaptcha) {
+      console.error("reCAPTCHA not loaded");
+      return false;
+    }
+
+    const captchaResponse = grecaptcha.getResponse();
+    const errorDiv = document.getElementById("captcha-error");
+
+    if (!captchaResponse) {
+      errorDiv.classList.remove("hidden");
+      return false;
+    }
+
+    errorDiv.classList.add("hidden");
+    event.target.submit();
+    return true;
+  }
+</script>
