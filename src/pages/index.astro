@@ -366,10 +366,6 @@ import { Icon } from "astro-icon/components";
 <script is:inline>
   function validateCaptchaResponse(event) {
     event.preventDefault();
-    if (!document.querySelector("div[data-netlify-recaptcha]")) {
-      console.error("reCAPTCHA div not found");
-      return;
-    }
 
     if (!window.grecaptcha) {
       console.error("reCAPTCHA not loaded");
