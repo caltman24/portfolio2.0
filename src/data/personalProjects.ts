@@ -34,7 +34,7 @@ export default [
   {
     title: "B.I.T - Discord Bot",
     description:
-      "Contact Vault is an all-in-one contact management system. It's similar to what's on your phone but with a little extra sauce. Add social media platforms to your contacts to have one place for contacts across multiple platforms.",
+      "BIT is a multipurpose Discord bot designed to spice up your server. Have you ever wanted to slap a friend for throwing your game? Ever wanted to check the weather without having to look it up? Well, BIT is just what you need!",
     previewImage: bitImage,
     previewUrl: "https://discord.gg/dqVEtNn6eX",
     githubUrl: "https://github.com/caltman24/BIT",
