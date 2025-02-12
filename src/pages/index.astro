@@ -24,7 +24,7 @@ import { Icon } from "astro-icon/components";
       >
         <Icon
           name="light-bulb"
-          class="absolute -right-15 top-20 w-md h-auto md:top-30 md:-right-25 md:w-lg lg:w-2xl lg:top-5 lg:right-5"
+          class="absolute -right-15 top-20 w-md h-auto md:top-30 md:-right-25 md:w-lg lg:w-2xl lg:top-5 lg:right-5 z-0"
         />
         <div
           class="max-w-7xl mx-auto text-center flex flex-col items-center justify-center gap-8 pb-24 pt-44 md:pb-44 md:pt-64"
@@ -42,7 +42,7 @@ import { Icon } from "astro-icon/components";
             partner with clients to bring their visions to life.
           </p>
           <!-- CTA Buttons -->
-          <div class="flex gap-4 mt-14">
+          <div class="flex gap-4 mt-14 relative z-10">
             <a href="#portfolio">
               <CTA
                 text="My Work"
