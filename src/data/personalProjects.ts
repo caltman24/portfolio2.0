@@ -10,6 +10,7 @@ export default [
     previewImage: contactVaultImage,
     previewUrl: "https://contactvault.up.railway.app",
     githubUrl: "https://github.com/caltman24/ContactVault-Public",
+    note: "First load may take a few seconds due to server cold start.",
     tags: ["Web App"],
     technologies: [".NET", "PostgreSQL", "AWS S3", "React", "Tailwind"],
   },

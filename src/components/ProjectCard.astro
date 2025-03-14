@@ -9,6 +9,7 @@ export interface Props {
   githubUrl?: string;
   tags?: string[];
   technologies?: string[];
+  note?: string;
 }
 
 const {
@@ -19,6 +20,7 @@ const {
   githubUrl,
   tags,
   technologies,
+  note,
 } = Astro.props;
 ---
 
@@ -101,33 +103,36 @@ const {
         </ul>
       </div>
 
-      <div class="flex gap-4" role="group" aria-label="Project links">
-        {
-          previewUrl && (
-            <a
-              href={previewUrl}
-              class="inline-flex items-center px-4 py-2 bg-brand hover:brightness-90 text-white rounded transition max-sm:text-sm"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`View live demo of ${title}`}
-            >
-              Live Demo
-            </a>
-          )
-        }
-        {
-          githubUrl && (
-            <a
-              href={githubUrl}
-              class="inline-flex items-center px-4 py-2 bg-brand-accent hover:brightness-90 text-white rounded transition"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`View source code for ${title} on GitHub`}
-            >
-              GitHub
-            </a>
-          )
-        }
+      <div>
+        {note && <p class="text-violet-400 text-sm mb-4">Note: {note}</p>}
+        <div class="flex gap-4" role="group" aria-label="Project links">
+          {
+            previewUrl && (
+              <a
+                href={previewUrl}
+                class="inline-flex items-center px-4 py-2 bg-brand hover:brightness-90 text-white rounded transition max-sm:text-sm"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`View live demo of ${title}`}
+              >
+                Live Demo
+              </a>
+            )
+          }
+          {
+            githubUrl && (
+              <a
+                href={githubUrl}
+                class="inline-flex items-center px-4 py-2 bg-brand-accent hover:brightness-90 text-white rounded transition"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`View source code for ${title} on GitHub`}
+              >
+                GitHub
+              </a>
+            )
+          }
+        </div>
       </div>
     </div>
   </div>
