@@ -11,7 +11,7 @@ export default [
     previewImage: zapImage,
     previewUrl: "https://zap-app.netlify.app",
     githubUrl: "https://github.com/caltman24/Zap",
-    note: "Work in Progress. Many features are missing or unfinished",
+    note: "Work in progress. Some features are still being built or refined.",
     tags: ["Web App", "Authorization", "Testing", "AWS", "Roles"],
     technologies: [
       ".NET",
@@ -28,7 +28,7 @@ export default [
   {
     title: "Contact Vault",
     description:
-      "Contact Vault is an all-in-one contact management system. It's similar to what's on your phone but with a little extra sauce. Add social media platforms to your contacts to have one place for contacts across multiple platforms.",
+      "Contact Vault is a contact management app that brings phone contacts and social profiles into one place, making it easier to keep track of people across multiple platforms.",
     previewImage: contactVaultImage,
     previewUrl: "https://contactvault.up.railway.app",
     githubUrl: "https://github.com/caltman24/ContactVault-Public",
@@ -39,7 +39,7 @@ export default [
   {
     title: "Simply Weather",
     description:
-      "Simply Weather uses Unsplash and weatherapi.com APIs to display real-time and forecasted weather with condition-themed backgrounds. It requests location access for local weather, proxies API calls via Netlify serverless functions, and supports offline use through a service worker.",
+      "Simply Weather uses the Unsplash and WeatherAPI services to deliver current conditions and forecasts with dynamic, weather-matched backgrounds. It supports location-based weather, serverless API proxying through Netlify, and offline access through a service worker.",
     previewImage: simplyWeatherImage,
     previewUrl: "https://ca-simply-weather.netlify.app",
     githubUrl: "https://github.com/caltman24/simply-weather",
@@ -57,7 +57,7 @@ export default [
   {
     title: "B.I.T - Discord Bot",
     description:
-      "BIT is a multipurpose Discord bot designed to spice up your server. Have you ever wanted to slap a friend for throwing your game? Ever wanted to check the weather without having to look it up? Well, BIT is just what you need!",
+      "BIT is a multipurpose Discord bot built to make community servers more interactive, with utility features and lightweight social commands that add personality without getting in the way.",
     previewImage: bitImage,
     previewUrl: "https://discord.gg/dqVEtNn6eX",
     githubUrl: "https://github.com/caltman24/BIT",

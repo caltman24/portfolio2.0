@@ -4,7 +4,7 @@ export default [
   {
     title: "In Gloom Media",
     description:
-      "In Gloom Media specalizes in lyric videos / visualizers, logo design, and Twitch animations. Strapi CMS provided a user-friendly CMS making it easy for my client to manage and update content. Paired with Astro, this resulted in a fast and seamless experience.",
+      "In Gloom Media specializes in lyric videos, visualizers, logo design, and Twitch animation. I built the site with Astro and Strapi so the client could manage content easily while still delivering a fast, streamlined browsing experience.",
     previewImage: projectImg,
     previewUrl: "https://ingloommedia.com",
     githubUrl: "",

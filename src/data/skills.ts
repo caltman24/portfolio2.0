@@ -4,19 +4,19 @@ export default {
       title: "Full-Stack Web Apps",
       icon: "mdi:react",
       description:
-        "From prototypes to full-featured apps with databases and user logins, I build end-to-end solutions using whatever tools fit best.",
+        "From prototypes to full-featured applications with databases and authentication, I build end-to-end solutions using the tools that best fit the job.",
     },
     {
       title: "Learning and Adaptability",
       icon: "mdi:head-dots-horizontal-outline",
       description:
-        "I quickly learn new technologies and adapt to changing needs. I can also focus my learning to become an expert when a project requires it.",
+        "I learn new technologies quickly, adapt well as priorities shift, and go deep when a project demands real expertise.",
     },
     {
       title: "Willing to Learn and Teach",
       icon: "mdi:human-male-board",
       description:
-        "I am a continuous learner, and I am equally willing to learn from others and share my knowledge with the team.",
+        "I value strong collaboration, stay open to learning from others, and share what I know when it helps the team move faster.",
     },
   ],
   forClients: [
@@ -24,19 +24,19 @@ export default {
       title: "Streamlined Websites",
       icon: "mdi:application-outline",
       description:
-        'Basic websites done well. Because sometimes "simple" is all you need. Affordable, easy to update, and designed to just work.',
+        "Straightforward websites built well. Fast, easy to maintain, and designed to do the job without unnecessary complexity.",
     },
     {
       title: "Custom Software Solutions",
       icon: "mdi:xml",
       description:
-        "Tailored tools for unique needs—WordPress plugins, Discord bots, automation. If software can fix it, I'll build it.",
+        "Tailored tools for unique needs, from WordPress plugins to automation scripts and Discord bots. If software can solve the problem, I can build the solution.",
     },
     {
       title: "UX Focused Design",
       icon: "mdi:pencil-ruler",
       description:
-        "I put myself in the user's shoes, always. From the big picture down to the smallest detail, I'm focused on ensuring they have a positive and productive experience.",
+        "I design with the user in mind from the start, focusing on clarity, flow, and the small details that make an experience feel polished.",
     },
   ],
   tools: [
