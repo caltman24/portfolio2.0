@@ -1,8 +1,30 @@
 import contactVaultImage from "../assets/images/projects/contactvault.png";
 import simplyWeatherImage from "../assets/images/projects/simplyweather.png";
 import bitImage from "../assets/images/projects/bit.png";
+import zapImage from "../assets/images/projects/zap.png";
 
 export default [
+  {
+    title: "Zap",
+    description:
+      "Zap is a full-stack ticketing and project management app with role-based access control, project-scoped data, ticket workflows, file attachments, and integration-tested backend authorization.",
+    previewImage: zapImage,
+    previewUrl: "https://zap-app.netlify.app",
+    githubUrl: "https://github.com/caltman24/Zap",
+    note: "Work in Progress. Many features are missing or unfinished",
+    tags: ["Web App", "Authorization", "Testing", "AWS", "Roles"],
+    technologies: [
+      ".NET",
+      "Remix",
+      "React",
+      "TypeScript",
+      "PostgreSQL",
+      "EF Core",
+      "AWS S3",
+      "CI/CD",
+      "Docker",
+    ],
+  },
   {
     title: "Contact Vault",
     description:
